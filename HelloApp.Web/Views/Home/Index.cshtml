@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    
+    <div class="row" id="divAction">
+        <div class="col-12">
+            <button type="button" class="btn btn-primary" onclick="showMessage()">Show Message</button>
+        </div>
+    </div>
+    <hr />
+    <div class="row" style="margin-top:10px">
+        <div class="col-12">
+            <div class="text-success" id="message-success"></div>
+            <div class="text-danger" id="message-error"></div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script type="text/javascript" src="https://alcdn.msauth.net/lib/1.2.0/js/msal.js"></script>
+    <script type="text/javascript">
+        if (typeof Msal === 'undefined') document.write(unescape("%3Cscript src='https://alcdn.msftauth.net/lib/1.2.0/js/msal.js' type='text/javascript' %3E%3C/script%3E"));
+    </script>
+}
